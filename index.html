@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tandzie Artnika - Dashboard</title>
     <style>
         * {
@@ -19,27 +19,22 @@
         iframe {
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
         }
     </style>
-    <script>
-        // Deteksi apakah perangkat yang membuka adalah HP / Tablet
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        var gasUrl = "https://script.google.com/macros/s/AKfycbxP4I9W2ENwPJ0_KeViTa4gHrGpqYRY6o_Apkisz6j8dkOodeLaw8PD5TllmEYDjm_vWg/exec";
-
-        if (isMobile) {
-            // Jika di HP, langsung alihkan ke Web App Google Apps Script
-            window.location.href = gasUrl;
-        }
-    </script>
 </head>
 <body>
 
-    <!-- Tampilan iframe full screen khusus untuk PC / Laptop -->
-    <iframe src="https://script.google.com/macros/s/AKfycbxP4I9W2ENwPJ0_KeViTa4gHrGpqYRY6o_Apkisz6j8dkOodeLaw8PD5TllmEYDjm_vWg/exec" allow="fullscreen"></iframe>
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbxP4I9W2ENwPJ0_KeViTa4gHrGpqYRY6o_Apkisz6j8dkOodeLaw8PD5TllmEYDjm_vWg/exec" 
+        allow="fullscreen; geolocation; microphone; camera"
+        sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
 
 </body>
 </html>
